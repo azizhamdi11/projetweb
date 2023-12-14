@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Contact Me</title>
     <link rel="stylesheet" href="styleContact.css">
+    <script>
+        function sendmail()
+         { 
+         alert("Thank you for contacting me!")
+         let message=document.getElementById('message').value
+         window.open("mailto:aziz.hamdi@esprit.tn?subject=work oppotunity&body="+message) 
+         }
+    </script>
 </head>
 <body>
 
     <div class="container">
-        <form>
+        <form action="javascript:sendmail()">
             <h1>Contact Me</h1>
             <input type="text" id="firstName" placeholder="First Name" required>
             <input type="text" id="lastName" placeholder="Last Name" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="text" id="mobile" placeholder="Mobile" required>
             <h4>Type Your Message Here...</h4>
-            <textarea required></textarea>
+            <textarea id="message" required></textarea>
             <input type="submit" value="Send" id="button">
         </form>
     </div>
